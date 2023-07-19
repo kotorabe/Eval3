@@ -123,7 +123,7 @@ class Depense extends CI_Controller {
     }
 
     public function import_csv() {
-        $file_path = 'C:\wamp64\www\Eval3\assets\example.csv';
+        $file_path = 'C:\wamp64\www\Eval3\assets\depense.csv';
         if (!file_exists($file_path)) {
             echo "Le fichier CSV n'existe pas.";
             return;
