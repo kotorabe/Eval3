@@ -1,0 +1,37 @@
+//CONTROLLERS
+
+//Lister tout
+public function GetAll(){
+    $query = $this->db->query("SELECT * FROM ");
+    return $query->result_array();
+}
+
+//Lister tout avec Where
+public function GetWhere($smthng){
+    $query = $this->db->query("SELECT * FROM  WHERE smthng = '$smthng'");
+    return $query->result_array();
+}
+
+//Compter tout
+public function CountAll(){
+    $query = $this->db->query("SELECT * FROM ");
+    return $query->num_rows();
+}
+
+//Compter tout avec Where 
+public function CountWhere($smthng){
+    $query = $this->db->query("SELECT * FROM WHERE smthng = '$smthng'");
+    return $query->num_rows();
+}
+
+//inserer
+public function Save($1, $2, $3, $4){
+    $query = $this->db->query("INSERT INTO table_name(smthng1, smthng2, smthng3, smthng4) VALUES('$1', '$2', '$3', '$4')");
+    return $query;
+}
+
+//update
+public function Save($1, $2, $3, $4){
+    $query = $this->db->query("UPDATE table_name SET smthng2 = '$2', smthng3 = '$3', smthng4 = '$4' WHERE smthng1 = '$1')");
+    return $query;
+}
